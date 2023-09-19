@@ -108,5 +108,4 @@ def extract(
     dataframes["public_holidays"] = holidays
 
     return dataframes
-    # test2
-    
+
