@@ -6,7 +6,7 @@ from typing import Dict
 from pandas import DataFrame
 from sqlalchemy.engine.base import Engine
 
-
+# load function to get data from the database
 def load(data_frames: Dict[str, DataFrame], database: Engine):
     """Load the dataframes into the sqlite database.
 
@@ -17,4 +17,6 @@ def load(data_frames: Dict[str, DataFrame], database: Engine):
     with database.begin() as connection:
         for tablename, df_toload in data_frames.items():
             df_toload.to_sql(tablename, connection, if_exists="replace", index=False)
+        
+
 
