@@ -6,7 +6,7 @@ from typing import Dict
 from pandas import DataFrame
 from sqlalchemy.engine.base import Engine
 
-# load function to get data from the database juandieg
+# load function to get data from the database juandie
 def load(data_frames: Dict[str, DataFrame], database: Engine):
     """Load the dataframes into the sqlite database.
 
